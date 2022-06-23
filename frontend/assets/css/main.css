@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Verdana, Tahoma, sans-serif;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header nav ul {
+  padding: 40px 0;
+}
+
+header nav ul li {
+  display: inline;
+  list-style-type: none;
+  padding: 0 15px;
+}
+
+header nav .btn {
+  padding: 40px 0;
+}
+
+header nav .btn button {
+  border: 1px solid red;
+  border-radius: 15px;
+  padding: 5px 15px;
+  background-color: red;
+  color: white;
+}
+
+.header-text {
+  padding: 20px 0;
+}
+
+.header-text span {
+  color: red;
+}
+
+#dropdown {
+  position: relative;
+}
+
+#dropdown a {
+  text-decoration: none;
+  color: black;
+}
+
+#dropdown-content {
+  display: none;
+  position: absolute;
+  border: 1px solid gray;
+  top: 100%;
+  border-radius: 10px;
+  left: 15px;
+  z-index: 1;
+  background-color: white;
+}
+
+#dropdown-content ul {
+  min-width: 200px;
+}
+
+#dropdown-content ul li {
+  display: block;
+  padding: 5px 15px;
+}
+
+#dropdown-content ul li a {
+  text-decoration: none;
+}
+
+#dropdown:hover #dropdown-content {
+  display: block;
+}
+
+#deep-dropdown {
+  position: relative;
+}
+
+#deep-dropdown a {
+  color: black;
+}
+
+#deep-dropdown-content {
+  display: none;
+  position: absolute;
+  border: 1px solid gray;
+  border-radius: 10px;
+  top: 0;
+  left: 200px;
+  z-index: 1;
+  background-color: white;
+}
+
+#deep-dropdown-content ul {
+  min-width: 200px;
+}
+
+#deep-dropdown-content ul li {
+  display: block;
+  padding: 5px 15px;
+}
+
+#deep-dropdown-content ul li a {
+  text-decoration: none;
+}
+
+#deep-dropdown:hover #deep-dropdown-content {
+  display: block;
+}
+
+.bars {
+  display: none;
+  font-size: 25px;
+  padding: 40px 0;
+}
+
+.btn-responsive {
+  display: none;
+  padding: 40px 0;
+}
+
+.btn-responsive button {
+  border: 1px solid red;
+  border-radius: 15px;
+  padding: 5px 15px;
+  background-color: red;
+  color: white;
+}
+
+@media screen and (min-width: 560px) and (max-width: 1100px) {
+  .btn button {
+    display: none;
+  }
+  .btn-responsive {
+    display: block;
+  }
+  #menu {
+    display: none;
+  }
+  .bars {
+    display: block;
+  }
+}
+
+#food-summary {
+  padding: 50px 0;
+  background-color: #dfdfdf;
+}
+
+.food {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.food-content #book {
+  border: 1px solid red;
+  border-radius: 25px;
+  padding: 10px 35px;
+  background-color: red;
+  color: white;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.food-content #book:hover {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.food-content h1 {
+  padding-bottom: 15px;
+  font-family: "Amatic SC", cursive;
+  font-size: 60px;
+  width: 350px;
+}
+
+.food-content p {
+  padding-bottom: 10px;
+}
+
+.food-content .fa-play {
+  color: red;
+  border: 1px solid red;
+  padding: 10px 15px;
+  border-radius: 100%;
+}
+
+.food-content #watch-video {
+  cursor: pointer;
+  margin-left: 20px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.food-content #watch-video:hover {
+  color: red;
+}
+
+@media screen and (min-width: 760px) and (max-width: 990px) {
+  .food-content {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .food-content h1 {
+    position: relative;
+    left: 25%;
+  }
+  .food-img img {
+    position: relative;
+    left: 5%;
+  }
+}
+
+#products {
+  padding-top: 50px;
+  text-align: center;
+}
+
+#products .our-menu h6 {
+  font-size: 14px;
+  color: gray;
+}
+
+#products .our-menu p {
+  font-size: 50px;
+  font-family: "Amatic SC", cursive;
+}
+
+#products .our-menu p span {
+  font-family: "Amatic SC", cursive;
+  color: red;
+}
+
+.product-categories {
+  padding-top: 20px;
+}
+
+.product-categories ul li {
+  display: inline;
+  font-size: 20px;
+  padding: 0 10px;
+}
+
+.product-categories ul li a {
+  color: black;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.product-categories ul li a:hover {
+  color: red;
+}
+
+.product-categories ul li #starters {
+  color: red;
+}
+
+.menu-categories {
+  padding-top: 20px;
+}
+
+.menu-categories h6 {
+  font-size: 14px;
+  color: gray;
+}
+
+#product {
+  padding-top: 40px;
+}
+
+.product-item img {
+  padding: 0 40px;
+}
+
+footer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.book-table {
+  text-align: center;
+}
+
+.book-table h1 {
+  font-family: "Amatic SC", cursive;
+}
+
+.book-table h1 span {
+  font-family: "Amatic SC", cursive;
+  color: red;
+}
+
+.book-table h6 {
+  font-size: 14px;
+  color: gray;
+}
+
+form button {
+  border: 1px solid red;
+  border-radius: 30px;
+  padding: 15px 50px;
+  background-color: red;
+  color: white;
+  margin-top: 20px;
+  position: relative;
+  left: 30%;
+}
+
+form input {
+  height: 50px;
+  margin-top: 20px;
+  padding: 0 5px;
+}
+
+form .message textarea {
+  margin-top: 15px;
+  width: 95%;
+  padding: 5px;
+}
