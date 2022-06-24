@@ -1,0 +1,60 @@
+﻿@model HomeViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+<!-- main start -->
+<main>
+    <!-- food summary start -->
+    <section id="food-summary">
+        <div class="container">
+            <div class="row food">
+                <div class="col-lg-6">
+                    <div class="food-content">
+                        <h1>@Model.FoodSummary.Title</h1>
+                        <p>@Model.FoodSummary.Description</p>
+                        <button id="book">Book a Table</button>
+                        <a id="watch-video"><i class="fa-solid fa-play"></i> Watch Video</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 food-img">
+                    <img src="~/images/@Model.FoodSummary.Image" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- food summary end -->
+    <!-- products start -->
+    <section id="products">
+        <div class="our-menu">
+            <h6>OUR MENU</h6>
+            <p>CHECK OUR <span>YUMMY MENU</span></p>
+        </div>
+        <div class="product-categories">
+            <ul>
+                <li><a href="#" id="starters">Starters</a></li>
+                <li><a href="#">Breakfast</a></li>
+                <li><a href="#">Lunch</a></li>
+                <li><a href="#">Dinner</a></li>
+            </ul>
+        </div>
+        <div class="menu-categories">
+            <h6>MENU</h6>
+            <h1>Starters</h1>
+        </div>
+        <div class="container">
+            <div class="row" id="product">
+                @foreach (var product in Model.Products)
+                {
+                    <div class="product-item col-lg-4">
+                        <img src="~/images/@product.Image" class="img-fluid" alt="">
+                        <h4>@product.Name</h4>
+                        <p>@product.Description</p>
+                        <p>$@product.Price</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </section>
+    <!-- products end -->
+</main>
+<!-- main end -->
