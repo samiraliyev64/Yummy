@@ -69,6 +69,15 @@
             </div>
             </li>
             <li>Contact</li>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li>@User.Identity.Name</li>
+                <li><a asp-controller="Account" asp-action="Logout">Logout</a></li>
+            }
+            else
+            {
+                <li><a asp-controller="Account" asp-action="SignIn">Sign In</a></li>
+            }
             </ul>
             <div class="btn">
                 <button>Book a Table</button>
